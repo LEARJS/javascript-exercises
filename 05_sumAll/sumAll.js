@@ -3,7 +3,7 @@ function isNumber(n) {
   }
   const sumAll = function(num1,num2) {
       result= 0;
-      if (isNumber(num1) == 0 || isNumber(num2) == 0 || num1 <= 0 || num2 <= 0){
+      if (isNaN(num1) || typeof num1 === 'string' || isNaN(num2) || typeof num2 === 'string' || num1 <= 0 || num2 <= 0){
           return 'ERROR'
       } else {
           if (num1<num2){ //sumAll(3, 10)
